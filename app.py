@@ -9,11 +9,12 @@ app.secret_key = 'your_secret_key'
 
 # MySQL RDS configuration
 db_config = {
-    'host': 'your-rds-endpoint.rds.amazonaws.com',
+    'host': 'stressdb.ch2mqkeiggw8.us-west-1.rds.amazonaws.com',
     'user': 'admin',
-    'password': 'yourpassword',
+    'password': 'sqlBhai1234567',
     'database': 'stressdb'
 }
+
 
 # Homepage
 @app.route('/')
