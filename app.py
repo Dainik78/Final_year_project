@@ -2,10 +2,14 @@ from flask import Flask, render_template, request, redirect, url_for, session, j
 from flask_cors import CORS
 import pymysql
 import json
+from prometheus_flask_exporter import PrometheusMetrics
 
 app = Flask(__name__)
+
+
 CORS(app)
 app.secret_key = 'your_secret_key'
+metrics = PrometheusMetrics(app)
 
 # MySQL RDS configuration
 db_config = {
